@@ -1,0 +1,9 @@
+C:\TFS.ldazure\Specification-Pattern\SpecificationPatternDemo\bin\Debug\netcoreapp1.1\SpecificationPatternDemo.deps.json
+C:\TFS.ldazure\Specification-Pattern\SpecificationPatternDemo\bin\Debug\netcoreapp1.1\SpecificationPatternDemo.runtimeconfig.json
+C:\TFS.ldazure\Specification-Pattern\SpecificationPatternDemo\bin\Debug\netcoreapp1.1\SpecificationPatternDemo.runtimeconfig.dev.json
+C:\TFS.ldazure\Specification-Pattern\SpecificationPatternDemo\bin\Debug\netcoreapp1.1\SpecificationPatternDemo.dll
+C:\TFS.ldazure\Specification-Pattern\SpecificationPatternDemo\bin\Debug\netcoreapp1.1\SpecificationPatternDemo.pdb
+C:\TFS.ldazure\Specification-Pattern\SpecificationPatternDemo\obj\Debug\netcoreapp1.1\SpecificationPatternDemo.AssemblyInfo.cs
+C:\TFS.ldazure\Specification-Pattern\SpecificationPatternDemo\obj\Debug\netcoreapp1.1\SpecificationPatternDemo.dll
+C:\TFS.ldazure\Specification-Pattern\SpecificationPatternDemo\obj\Debug\netcoreapp1.1\SpecificationPatternDemo.pdb
+C:\TFS.ldazure\Specification-Pattern\SpecificationPatternDemo\obj\Debug\netcoreapp1.1\SpecificationPatternDemo.csprojResolveAssemblyReference.cache
