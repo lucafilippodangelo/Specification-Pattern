@@ -6,6 +6,9 @@ namespace SpecificationPatternDemo
 {
     public static class DelegateUtility
     {
+
+        #region Basic Delegate Example - "Delegate Calls"
+
         /// <summary>
         /// //LD SPEP001
         /// A delegate object is normally constructed by providing the name of the method the delegate will wrap, 
@@ -36,6 +39,9 @@ namespace SpecificationPatternDemo
             inputHandlerAsCallback("The number is: " + (param1 + param2).ToString());
         }
 
+        #endregion
+
+        #region Basic Delegate Example - "Event Delegate"
         //LD STEP008
         // declaration of a delegate
         public delegate void EventDelegate(string strX);
@@ -51,6 +57,7 @@ namespace SpecificationPatternDemo
             //inside the method I call the event
             eventToNotifyWhenAStringChange(strNew + " d'angelo");
         }
+        #endregion
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using static SpecificationPatternDemo.AnonymousMethodUtility;
 using static SpecificationPatternDemo.DelegateUtility;
+using static SpecificationPatternDemo.LampdaExpressionsUtility;
 
 namespace SpecificationPatternDemo
 {
@@ -9,7 +10,7 @@ namespace SpecificationPatternDemo
         static void Main(string[] args)
         {
         
-        #region Basic Delegate Example - "Delegate Calls"
+        #region "Delegate Basics"
 
             //LD STEP003
             // Instantiate the delegate and set "aMethodForDelegateThatPrint" as a subscriber
@@ -36,8 +37,7 @@ namespace SpecificationPatternDemo
 
             #endregion region
 
-
-            #region Basic Delegate Example - "Delegate Calls"
+        #region "Event Delegate"
 
             //LD STEP011
             // tie "aMethodThatPrintAString" to the event, this method has to have the same signature of the 
@@ -52,7 +52,20 @@ namespace SpecificationPatternDemo
             //LD STEP012
             // at any time we will call the method "ThisMethodChangeAString"
             ThisMethodChangeAString("luca");
-            Console.ReadLine();
+            //Console.ReadLine();
+            #endregion
+
+        #region "Delegate AND Lampda Expressions"
+        //LD STEP014
+        
+            //LD WAY TO DECLARE ONE
+        deleg myDelegate = x => x * x; // instead to assign a named method, we use the anonymous function that is a lampda expression
+            int j = myDelegate(5); //LD then just call the delagate as usual
+
+            //LD WAY TO DECLARE TWO
+            Func<int, int> myDelegate2 = x => x * x;
+            int j = myDelegate2(5); //LD then just call the delagate as usual
+
             #endregion
 
             #region Anonymoys Methods Example
@@ -63,14 +76,18 @@ namespace SpecificationPatternDemo
 
             //LD ANONYMOUS APPROACH - anonymous method using delegate keyword
             // her eis like to subscribe the method "multiplyAndPrint" buy by using an inline anonymous approach.
-            del d1 = delegate (int x, int y) { int number = x + y; Console.WriteLine("total anonymous: " + number); };
+            del d1 = delegate (int x, int y) { int number = x + y; Console.WriteLine("total anonymous ld: " + number); };
             d1(2, 3);
+
 
             //LD ANONYMOUS APPROACH - anonymous method using delegate keyword with return
             delReturningInt d2 = delegate (int x, int y) { return x + y;}; //here I assign the subscriber
             int aNumber= d2(2, 3);
+
             #endregion
 
+
+            Console.ReadLine();
         }
     }
 }
