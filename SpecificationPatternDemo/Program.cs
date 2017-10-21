@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using static SpecificationPatternDemo.AnonymousMethodUtility;
 using static SpecificationPatternDemo.DelegateUtility;
 using static SpecificationPatternDemo.LampdaExpressionsUtility;
@@ -55,20 +56,21 @@ namespace SpecificationPatternDemo
             //Console.ReadLine();
             #endregion
 
-        #region "Delegate AND Lampda Expressions"
-        //LD STEP014
-        
-            //LD WAY TO DECLARE ONE
-        deleg myDelegate = x => x * x; // instead to assign a named method, we use the anonymous function that is a lampda expression
+            #region "Delegate AND Lampda Expressions"
+            //LD STEP014
+
+            //LD Initialize delegate with lampda expression
+            // public delegate int deleg(int i);
+            deleg myDelegate = x => x * x; // instead to assign a named method, we use the anonymous function that is a lampda expression
             int j = myDelegate(5); //LD then just call the delagate as usual
 
-            //LD WAY TO DECLARE TWO
+            //LD Initialize delegate with lampda expression and function
             Func<int, int> myDelegate2 = x => x * x;
-            int j = myDelegate2(5); //LD then just call the delagate as usual
+            int j2 = myDelegate2(5); //LD then just call the delagate as usual
 
             #endregion
 
-            #region Anonymoys Methods Example
+            #region Anonymoys Methods
 
             //LD STANDARD APPROACH
             del d0 = multiplyAndPrint;
@@ -86,6 +88,23 @@ namespace SpecificationPatternDemo
 
             #endregion
 
+            #region Expression Trees
+
+                #region Example "Creating Expression Trees from Lambda Expressions"
+
+                /* //LD 
+                When a lambda expression is assigned to a variable of type Expression<TDelegate>, 
+                the compiler emits code to build an expression tree that represents the lambda expression. 
+                */
+                Expression<Func<int, int, int>> expression = (num1, num2) => num1 + num2;
+
+                Func<int, int, int> compiledExpression = expression.Compile ();// Compile the expression
+
+                int result = compiledExpression(3, 4); // Execute the expression. return 7
+
+                #endregion internal
+
+            #endregion
 
             Console.ReadLine();
         }

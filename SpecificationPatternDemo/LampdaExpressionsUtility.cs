@@ -9,6 +9,7 @@ namespace SpecificationPatternDemo
         //LD 
         /*
          A lambda expression is an anonymous function that you can use to create delegates or expression tree types.
+
          */
 
         //LD STEP13
