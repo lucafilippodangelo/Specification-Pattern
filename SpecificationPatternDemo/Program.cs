@@ -56,7 +56,7 @@ namespace SpecificationPatternDemo
             //Console.ReadLine();
             #endregion
 
-            #region "Delegate AND Lampda Expressions"
+        #region "Delegate AND Lampda Expressions"
             //LD STEP014
 
             //LD Initialize delegate with lampda expression
@@ -70,7 +70,7 @@ namespace SpecificationPatternDemo
 
             #endregion
 
-            #region Anonymoys Methods
+        #region Anonymoys Methods
 
             //LD STANDARD APPROACH
             del d0 = multiplyAndPrint;
@@ -88,7 +88,7 @@ namespace SpecificationPatternDemo
 
             #endregion
 
-            #region Expression Trees
+        #region Expression Trees
 
                 #region Example "Creating Expression Trees from Lambda Expressions"
 
